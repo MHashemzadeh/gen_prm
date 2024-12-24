@@ -43,12 +43,13 @@ python train_direct_prm.py <config_direct.yaml>
 python train_cot_prm.py <config_cot.yaml>
 ```
 
-
-
+The bash file `run.sh` contains the settings required to execute it on the Mila cluster.
 
 ---
 
-<!-- Note: We first worked on prm800k with LORA but we did not get good results. Then after talking with the mentor, he suggested to use full-fine tuning and instead of prm800k use gsm8k. So then we created the code for that one as well. Here we put this one to show that we also worked on this data. All the codes are written by mysel.  -->
+To evaluate the GenPRM, execute `evaluation/best_of_n_with_prm.py`. For assessing iterative correctness, run `best_of_n_with_prm_iterative.py`
+
+
 
 
 
