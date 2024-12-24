@@ -1,8 +1,15 @@
 # Generative Process Reward Model
 
-## Here is the code for prm800k dataset with google/gemma-2b-it using LORA adapter
+## Here is the code for Generatove Process Reward model, GenPRM, using GSM8K and prm800k datasets 
 
+
+
+
+![n](GPV.pdf "View of Example")
 ### Installation
+
+
+
 
 To install the packages, first create a virtual environment and then follow these steps, which are worked for the Mila cluster:
 
