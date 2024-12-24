@@ -1,0 +1,6 @@
+{
+  "input": "Given a math problem and a partial step-by-step solution, determine whether the solution is correct so far or not. That is whether the You must output 'Yes' if it is correct and 'No' if not.\n\n",
+  "question_prefix": "Question: {question}",
+  "step_prefix": "",
+  "useful_prefix": "Is the solution correct (Yes/No)?"
+}

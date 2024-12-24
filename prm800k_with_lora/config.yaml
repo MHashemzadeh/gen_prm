@@ -1,0 +1,48 @@
+dataset:
+  test_file: "/home/mila/m/maryam.hashemzadeh/scratch/verifier/finalanswer_downsampled_prm800k_test_phase2.json"
+  train_file: "/home/mila/m/maryam.hashemzadeh/scratch/verifier/finalanswer_downsampled_prm800k_train_phase2.json"
+evaluation:
+  num_samples: 2000
+  temperature: 0.7
+  top_k: 4
+  top_p: 0.95
+lora: True
+max_seq_length: 3000
+model:
+  bnb_config:
+    bnb_4bit_compute_dtype: bfloat16
+    bnb_4bit_quant_type: nf4
+    bnb_4bit_use_double_quant: True
+    load_in_4bit: True
+  model_id: google/gemma-2b-it
+peft:
+  bias: none
+  lora_alpha: 128
+  lora_dropout: 0.05
+  r: 4
+  target_modules: all-linear
+  task_type: CAUSAL_LM
+push_to_hf: False
+training:
+  bf16: True
+  eval_strategy: "no"
+  gradient_accumulation_steps: 8
+  gradient_checkpointing: True
+  learning_rate: 0.0001
+  logging_steps: 10
+  lr_scheduler_type: constant
+  max_grad_norm: 0.3
+  num_train_epochs: 3
+  optim: adamw_torch_fused
+  output_dir: "/home/mila/m/maryam.hashemzadeh/scratch/verifier/gp_verifier/checkpoint/"
+  per_device_train_batch_size: 1
+  push_to_hub: False
+  report_to: wandb
+  save_strategy: epoch
+  tf32: True
+  warmup_ratio: 0.03
+wandb:
+  project: "gpv"
+  run_name: "diff_rank"
+  entity: "sarath-chandar"
+finalanswer: True

@@ -1,0 +1,18 @@
+# Install Pytorch & other libraries
+torch==2.4.0
+wandb
+transformers==4.44.2
+datasets==2.21.0
+accelerate==0.34.2
+evaluate==0.4.2
+bitsandbytes==0.43.3
+trl==0.9.6
+peft==0.12.0
+ninja
+packaging
+wheel 
+setuptools
+hydra-core
+pyyaml
+langchain
+scikit-learn

@@ -1,0 +1,3 @@
+{
+  "template": "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\nGiven a math question and a partial step-by-step solution, determine whether the solution is correct so far or not. You must output 'Yes' if it is correct and 'No' if not.\nQuestion: {question}\nSolution: {solution}\nIs the solution so far correct (Yes/No)?<|eot_id|>\n<|start_header_id|>assistant<|end_header_id|>"
+}
